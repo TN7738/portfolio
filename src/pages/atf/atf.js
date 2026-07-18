@@ -12,22 +12,22 @@ const ATF = () => {
                         <ul>
                             <li>
                                 <ScrollIntoView selector="#about">
-                                    <a>About</a>
+                                    <button>About</button>
                                 </ScrollIntoView>
                             </li>
                             <li>
                                 <ScrollIntoView selector="#skills">
-                                    <a>Skills</a>
+                                    <button>Skills</button>
                                 </ScrollIntoView>
                             </li>
                             <li>
                                 <ScrollIntoView selector="#career">
-                                    <a>Career</a>
+                                    <button>Career</button>
                                 </ScrollIntoView>
                             </li>
                             <li>
                                 <ScrollIntoView selector="#contact-me">
-                                    <a>Contact Me</a>
+                                    <button>Contact Me</button>
                                 </ScrollIntoView>
                             </li>
                         </ul>
