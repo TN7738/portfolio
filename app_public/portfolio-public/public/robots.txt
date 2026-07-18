@@ -1,7 +1,0 @@
-User-agent: *
-Allow: /#about
-Allow: /#skills
-Allow: /#projects
-Allow: /#contact-me
-
-Sitemap: https://tejasnashikkar.xyz/sitemap.xml

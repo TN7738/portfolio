@@ -1,6 +1,5 @@
 import React, {useState} from "react";
 import './contact.scss';
-import axios from 'axios';
 
 const Contact = () =>{
     const [name, setName] = useState("");
@@ -12,28 +11,8 @@ const Contact = () =>{
     const onSubmit = (e) => {
         e.preventDefault();
 
-        const userData = {
-            name: name,
-            email: email,
-            details: details
-        };
-
-        axios.get('/api/collectlist')
-            .then(res => {
-                const found = res.data.some(el => el.email === userData.email);
-                if(found){
-                    setMsg("Sorry for delay! I'll contact you shortly.");
-                    setMsgClass("msg err");
-                }
-                else{
-                    axios.post('/api/collectlist', userData)
-                        .then(res => {
-                            setMsg("Thank you! I'll contact you shortly.");
-                            setMsgClass("msg success");
-                        });
-                }
-            });
-
+        setMsg("Thank you! I'll contact you shortly.");
+        setMsgClass("msg success");
         setName("");
         setEmail("");
         setDetails("");
