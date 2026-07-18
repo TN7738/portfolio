@@ -1,0 +1,102 @@
+/* Second wrap CSS Starts */
+.second-wrap{
+    padding: 85px 0 70px;
+    .abt-wrap{
+        display: flex;
+        align-items: center;
+        padding: 0 100px;
+        .left-wrap{
+            margin-right: 50px;
+            .me-img{
+                border-radius: 50%;
+                width: 250px;
+                height: 250px;
+            }
+            .social-wrap{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding-top: 10px;
+                a{
+                    margin-left: 20px;
+                    img{
+                        width: 40px;
+                    }
+                    &:first-of-type{
+                        margin-left: 0;
+                        img{
+                            width: 32px;
+                        }
+                    }
+                }
+            }
+        }
+        .right-wrap{
+            h3{
+                font-size: 50px;
+                color: #3a3a3a;
+                margin-bottom: 10px;
+                font-weight: 300;
+            }
+            .desc-txt{
+                font-size: 18px;
+                color: #838383;
+                &:first-of-type{
+                    padding-bottom: 30px;
+                }
+                .dwnld-lnk{
+                    display: inline;
+                    a{
+                        text-decoration: underline;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+    hr{
+        border: solid 1px #eff5f7;
+        margin-top: 50px;
+    }
+    .nums-wrap{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding-top: 40px;
+        .num{
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+            align-items: center;
+            h4{
+                font-size: 30px;
+                color: #009ca8;
+            }
+            p{
+                font-size: 16px;
+                color: #627175;
+                padding-top: 7px;
+            }
+        }
+    }
+    @media only screen and (max-width: 800px){
+        .abt-wrap{
+            padding: 0;
+            flex-flow: column;
+            text-align: center;
+            .left-wrap{
+                margin: 0 0 40px;
+            }
+        }
+        .nums-wrap{
+            flex-flow: column;
+            .num{
+                margin-top: 30px;
+                &:first-child{
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+}
+/* Second wrap CSS Ends */

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-PZ89MPB');
+    </script>
+    <!-- End Google Tag Manager -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-221008155-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-221008155-1');
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hi, I am Tejas Nashikkar, a frontend developer living in Kitchener, Ontario Canada. If you want your own website or grow your business online then visit this website.">
+    <meta name="keywords" content="web development, frontend developer, web designing, javascript, javascript developer, react, angular, freelancer, website, seo, aws, software developer, kitchener, waterloo, toronto, vancouver, canada">
+    <meta name="author" content="Tejas Nashikkar">
+    <title>Tejas Nashikkar</title>
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Sacramento&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PZ89MPB"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="root"></div>
+    <script>
+      window.addEventListener('load', function() {
+        var numCountFlag = true;
+        document.addEventListener('scroll', () => {
+          if(window.scrollY >= 255 && numCountFlag){
+            $(".count").each(function () {
+                var count = $(this);
+                var countTo = count.attr("data-count");
+                $({ countNum: count.text() }).animate(
+                    {
+                        countNum: countTo
+                    },
+                    {
+                        duration: 1900,
+                        easing: "linear",
+                        step: function () {
+                            count.text(Math.floor(this.countNum));
+                        },
+                        complete: function () {
+                            count.text(this.countNum);
+                        }
+                    }
+                );
+            });
+            numCountFlag = false;
+          }
+        });
+            
+        const swiper = new Swiper('.swiper', {
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            loop: true,
+            autoplay: {
+                delay: 4000,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'bullets',
+            }
+        });
+        
+        const style = 'font-weight: bold; font-size: 15px;color: #41b0bf;';
+        console.log('%c I know you would check this :) Connect? -> mailto: nashikkar.tejas@gmail.com', style);
+      });
+    </script>
+  </body>
+</html>

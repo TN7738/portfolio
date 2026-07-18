@@ -1,0 +1,129 @@
+/* ATF CSS Starts */
+.atf-wrap{
+    height: 70vh;
+    min-height: 640px;
+    background: #41b0bf;
+    overflow: hidden;
+    header{
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background-color: #41b0bf;
+        z-index: 2;
+        .head-wrap{
+            padding: 28px 0;
+            ul{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                li{
+                    margin-left: 50px;
+                    &:first-child{
+                        margin-left: 0;
+                    }
+                    a{
+                        font-size: 15px;
+                        color: #f2f2f2;
+                        text-transform: uppercase;
+                        text-decoration: none;
+                        cursor: pointer;
+                        position: relative;
+                        overflow: hidden;
+                        &:after{
+                            content: '';
+                            position: absolute;
+                            width: 0;
+                            height: 2px;
+                            background-color: #f2f2f2;
+                            transition: all 450ms;
+                            bottom: -7px;
+                            left: 50%;
+                            transform: translateX(-50%);
+                        }
+                        &:hover{
+                            &:after{
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .first-wrap{
+        margin-top: 72px;
+        background: url('../../../public/images/atf-bg.png') top center / contain repeat-x;
+        .after-wrap{
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .cent-wrap{
+                display: flex;
+                flex-flow: column;
+                justify-content: center;
+                align-items: center;
+                padding: 95px 0;
+            }
+            h1{
+                font-family: 'Sacramento', cursive;
+                color: #fff;
+                font-size: 70px;
+                padding: 10px 0;
+            }
+            .line2{
+                font-size: 40px;
+                color: #f2f2f2;
+                margin: 55px 0 0;
+                position: relative;
+                overflow: hidden;
+                b{
+                    width: 0;
+                    display: inline-block;
+                    transition: width 450ms linear 450ms;
+                    -webkit-transition: width 450ms linear 450ms;
+                    -o-transition: width 450ms linear 450ms;
+                    -moz-transition: width 450ms linear 450ms;
+                    white-space: nowrap;
+                    &.show{
+                        width: 424px;
+                    }
+                }
+            }
+        }
+    }
+    @media only screen and (max-width: 660px){
+        height: auto;
+        min-height: auto;
+        header{
+            display: none;
+        }
+        .first-wrap{
+            margin-top: 0;
+            background-size: 130%;
+            background-repeat: no-repeat;
+            .after-wrap{
+                .cent-wrap{
+                    width: 100%;
+                    img{
+                        display: none;
+                    }
+                    h1{
+                        font-size: 60px;
+                    }
+                    .line2{
+                        font-size: 25px;
+                    }
+                }
+            }
+        }
+    }
+    @media only screen and (max-width: 660px){
+        .first-wrap .after-wrap .cent-wrap h1{
+            text-align: center;
+            max-width: 300px;
+        }
+    }
+}
+/* ATF CSS Ends */

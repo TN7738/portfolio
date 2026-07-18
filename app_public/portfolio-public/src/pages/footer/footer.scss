@@ -1,0 +1,27 @@
+/* Footer CSS Starts */
+footer{
+    text-align: center;
+    padding-top: 70px;
+    p{
+        font-family: Sacramento,cursive;
+        color: #009ca8;
+        font-size: 70px;
+        padding-bottom: 40px;
+    }
+    img{
+        height: 240px;
+        margin-bottom: -6px;
+    }
+    @media only screen and (max-width: 660px){
+        p{
+            max-width: 300px;
+            margin: 0 auto;
+            font-size: 60px;
+        }
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+/* Footer CSS Ends */

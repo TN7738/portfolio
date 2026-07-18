@@ -1,0 +1,190 @@
+/* Third wrap CSS Starts */
+.third-wrap{
+    padding: 70px 0 40px;
+    background-color: #303030;
+    h3{
+        font-size: 50px;
+        color: #fff;
+        margin-bottom: 10px;
+        font-weight: 300;
+        text-align: center;
+    }
+    .skill-wrap{
+        padding: 40px 150px;
+        .skillbar {
+            position: relative;
+            display: block;
+            margin-bottom: 25px;
+            width: 100%;
+            background: #eee;
+            height: 35px;
+            border-radius: 3px;
+            -moz-border-radius: 3px;
+            -webkit-border-radius: 3px;
+            -webkit-transition: .4s linear;
+            -moz-transition: .4s linear;
+            -ms-transition: .4s linear;
+            -o-transition: .4s linear;
+            transition: .4s linear;
+            -webkit-transition-property: width,background-color;
+            -moz-transition-property: width,background-color;
+            -ms-transition-property: width,background-color;
+            -o-transition-property: width,background-color;
+            transition-property: width,background-color;
+            .skillbar-title {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 110px;
+                font-weight: 700;
+                font-size: 13px;
+                color: #fff;
+                background: #6adcfa;
+                -webkit-border-top-left-radius: 3px;
+                -webkit-border-bottom-left-radius: 4px;
+                -moz-border-radius-topleft: 3px;
+                -moz-border-radius-bottomleft: 3px;
+                border-top-left-radius: 3px;
+                border-bottom-left-radius: 3px;
+                span {
+                    display: block;
+                    background: rgba(0,0,0,.1);
+                    padding: 0 20px;
+                    height: 35px;
+                    line-height: 35px;
+                    -webkit-border-top-left-radius: 3px;
+                    -webkit-border-bottom-left-radius: 3px;
+                    -moz-border-radius-topleft: 3px;
+                    -moz-border-radius-bottomleft: 3px;
+                    border-top-left-radius: 3px;
+                    border-bottom-left-radius: 3px;
+                }
+            }
+            .skillbar-bar {
+                height: 35px;
+                width: 0;
+                background: #6adcfa;
+                border-radius: 3px;
+                -moz-border-radius: 3px;
+                -webkit-border-radius: 3px;
+            }
+            .skill-bar-percent {
+                position: absolute;
+                right: 10px;
+                top: 0;
+                font-size: 11px;
+                height: 35px;
+                line-height: 35px;
+                color: #fff;
+                color: rgba(0,0,0,.4);
+            }
+            &:first-of-type{
+                .skillbar-title{
+                    background: #03A9F4;
+                }
+                .skillbar-bar{
+                    background: rgb(129, 212, 250); 
+                    width: 85%;
+                }
+            }
+            &:nth-of-type(2){
+                .skillbar-title{
+                    background: #673AB7;
+                }
+                .skillbar-bar{
+                    background: rgb(179, 157, 219); 
+                    width: 85%;
+                }
+            }
+            &:nth-of-type(3){
+                .skillbar-title{
+                    background: #FF5722;
+                }
+                .skillbar-bar{
+                    background: rgb(255, 171, 145); 
+                    width: 95%;
+                }
+            }
+            &:nth-of-type(4){
+                .skillbar-title{
+                    background: #4CAF50;
+                }
+                .skillbar-bar{
+                    background: rgb(165, 214, 167); 
+                    width: 95%;
+                }
+            }
+            &:nth-of-type(5){
+                .skillbar-title{
+                    background: #F44336;
+                }
+                .skillbar-bar{
+                    background: rgb(239, 154, 154); 
+                    width: 65%;
+                }
+            }
+        }
+    }
+    .othr-skill-wrap{
+        padding: 40px 0 0;
+        .inner-wrap{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            ul{
+                li{
+                    font-size: 18px;
+                    color: #f2f2f2;
+                    position: relative;
+                    padding-left: 25px;
+                    &:before{
+                        content: '';
+                        position: absolute;
+                        width: 20px;
+                        height: 20px;
+                        left: 0;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        background: url('../../../public/images/tick.png') center / 100% no-repeat;
+                    }
+                }
+            }
+        }
+    }
+    .dwnld-wrap{
+        padding-top: 65px;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        p{
+            font-size: 25px;
+            color: #98CCFD;
+            padding-bottom: 20px;
+        }
+        a{
+            cursor: pointer;
+        }
+    }
+    @media only screen and (max-width: 1200px){
+        .skill-wrap{
+            margin: 0 auto;
+            padding: 40px 0;
+            max-width: 500px;
+        }
+        .othr-skill-wrap .inner-wrap{
+            ul li{
+                font-size: 16px;
+            }
+        }
+    }
+    @media only screen and (max-width: 660px){
+        .othr-skill-wrap .inner-wrap{
+            flex-flow: column;
+            align-items: flex-start;
+            max-width: 170px;
+            margin: 0 auto;
+        }
+    }
+}
+/* Third wrap CSS Ends */

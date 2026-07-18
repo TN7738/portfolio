@@ -1,0 +1,66 @@
+/* Fifth wrap CSS Starts */
+.fifth-wrap{
+    padding: 40px 0;
+    margin: 70px 0;
+    background-color: #e55c4c;
+    h3{
+        font-size: 50px;
+        color: #fff;
+        margin-bottom: 40px;
+        font-weight: 300;
+        text-align: center;
+    }
+    .swiper{
+        padding-bottom: 60px;
+        .swiper-button-next:after, .swiper-button-prev:after{
+            color: #fff;
+        }
+        .swiper-pagination{
+            .swiper-pagination-bullet{
+                background: #fff;
+            }
+        }
+    }
+    .quotes-wrap{
+        .quote{
+            text-align: center;
+            img{
+                width: 100%;
+                max-width: 150px;
+                border-radius: 50%;
+            }
+            .txt{
+                font-size: 30px;
+                color: #fff;
+                max-width: 700px;
+                width: 100%;
+                padding: 40px 0 20px;
+                font-family: serif;
+                font-style: italic;
+                margin: 0 auto;
+            }
+            .bywho{
+                font-size: 21px;
+                font-weight: 700;
+                color: #fff;
+            }
+        }
+    }
+    @media only screen and (max-width: 1200px){
+        .swiper{
+            padding-bottom: 60px;
+            max-width: 700px;
+        }
+        .quotes-wrap .quote .txt{
+            max-width: 500px;
+        }
+    }
+    @media only screen and (max-width: 660px){
+        .swiper{
+            .swiper-button-prev, .swiper-button-next{
+                display: none;
+            }
+        }
+    }
+}
+/* Fifth wrap CSS Ends */

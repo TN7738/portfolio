@@ -1,0 +1,507 @@
+/* CSS Reset Starts */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; } article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; } body { line-height: 1.4; } ol, ul { list-style: none; } blockquote, q { quotes: none; } blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; } table { border-collapse: collapse; border-spacing: 0; } *{box-sizing: border-box; line-height: 1.4;} a{color: inherit;}
+/* CSS Reset Ends */
+
+html {
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    background-color: #fff;
+}
+
+/* Custom Scroll Bar Starts */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+/* Custom Scroll Bar Ends */
+
+/* Grid CSS Starts */
+.grid{
+    width: 100%;
+    max-width: 1230px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+/* Grid CSS Ends */
+
+/* Blinking cursor Starts */
+@keyframes cursor-blink {
+    0% {
+      opacity: 0;
+    }
+}
+/* Blinking cursor Ends */
+
+/* ATF CSS Starts */
+.atf-wrap{
+    height: 70vh;
+    background: #41b0bf;
+    overflow: hidden;
+    header{
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background-color: #41b0bf;
+        z-index: 2;
+        .head-wrap{
+            padding: 28px 0;
+            ul{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                li{
+                    margin-left: 50px;
+                    &:first-child{
+                        margin-left: 0;
+                    }
+                    a{
+                        font-size: 15px;
+                        color: #f2f2f2;
+                        text-transform: uppercase;
+                        text-decoration: none;
+                        cursor: pointer;
+                        position: relative;
+                        overflow: hidden;
+                        &:after{
+                            content: '';
+                            position: absolute;
+                            width: 0;
+                            height: 2px;
+                            background-color: #f2f2f2;
+                            transition: all 450ms;
+                            bottom: -7px;
+                            left: 50%;
+                            transform: translateX(-50%);
+                        }
+                        &:hover{
+                            &:after{
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .first-wrap{
+        margin-top: 72px;
+        background: url('../../images/atf-bg.png') top center / contain repeat-x;
+        .after-wrap{
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .cent-wrap{
+                display: flex;
+                flex-flow: column;
+                justify-content: center;
+                align-items: center;
+                padding: 95px 0;
+            }
+            h1{
+                font-family: 'Sacramento', cursive;
+                color: #fff;
+                font-size: 70px;
+                padding: 10px 0;
+            }
+            .line2{
+                font-size: 40px;
+                color: #f2f2f2;
+                margin: 55px 0 0;
+                position: relative;
+                overflow: hidden;
+                height: 50px;
+                &:after{
+                    content: '';
+                    position: absolute;
+                    top: 5px;
+                    right: 0;
+                    width: 2px;
+                    height: 70%;
+                    background-color: #aebcb9;
+                    animation: cursor-blink 1.5s steps(2) infinite;
+                }
+                b{
+                    width: 0;
+                    display: inline-block;
+                    transition: width 450ms linear 450ms;
+                    -webkit-transition: width 450ms linear 450ms;
+                    -o-transition: width 450ms linear 450ms;
+                    -moz-transition: width 450ms linear 450ms;
+                    white-space: nowrap;
+                    &.show{
+                        width: 324px;
+                    }
+                }
+            }
+        }
+    }
+}
+/* ATF CSS Ends */
+
+/* Second wrap CSS Starts */
+.second-wrap{
+    padding: 70px 0;
+    .abt-wrap{
+        display: flex;
+        align-items: center;
+        padding: 0 100px;
+        .left-wrap{
+            margin-right: 50px;
+            .me-img{
+                border-radius: 50%;
+                width: 250px;
+                height: 250px;
+            }
+            .social-wrap{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding-top: 10px;
+                a{
+                    margin-left: 20px;
+                    img{
+                        width: 40px;
+                    }
+                    &:first-of-type{
+                        margin-left: 0;
+                        img{
+                            width: 32px;
+                        }
+                    }
+                }
+            }
+        }
+        .right-wrap{
+            h3{
+                font-size: 50px;
+                color: #3a3a3a;
+                margin-bottom: 10px;
+                font-weight: 300;
+            }
+            p{
+                font-size: 18px;
+                color: #838383;
+                &:first-of-type{
+                    padding-bottom: 30px;
+                }
+                a.to-resume{
+                    text-decoration: underline;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    hr{
+        border: solid 1px #eff5f7;
+        margin-top: 50px;
+    }
+    .nums-wrap{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding-top: 40px;
+        .num{
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+            align-items: center;
+            h4{
+                font-size: 30px;
+                color: #009ca8;
+            }
+            p{
+                font-size: 16px;
+                color: #627175;
+                padding-top: 7px;
+            }
+        }
+    }
+}
+/* Second wrap CSS Ends */
+
+/* Third wrap CSS Starts */
+.third-wrap{
+    padding: 40px 0;
+    background-color: #303030;
+    h3{
+        font-size: 50px;
+        color: #fff;
+        margin-bottom: 10px;
+        font-weight: 300;
+        text-align: center;
+    }
+    .skill-wrap{
+        padding: 40px 150px;
+        .skillbar {
+            position: relative;
+            display: block;
+            margin-bottom: 25px;
+            width: 100%;
+            background: #eee;
+            height: 35px;
+            border-radius: 3px;
+            -moz-border-radius: 3px;
+            -webkit-border-radius: 3px;
+            -webkit-transition: .4s linear;
+            -moz-transition: .4s linear;
+            -ms-transition: .4s linear;
+            -o-transition: .4s linear;
+            transition: .4s linear;
+            -webkit-transition-property: width,background-color;
+            -moz-transition-property: width,background-color;
+            -ms-transition-property: width,background-color;
+            -o-transition-property: width,background-color;
+            transition-property: width,background-color;
+            .skillbar-title {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 110px;
+                font-weight: 700;
+                font-size: 13px;
+                color: #fff;
+                background: #6adcfa;
+                -webkit-border-top-left-radius: 3px;
+                -webkit-border-bottom-left-radius: 4px;
+                -moz-border-radius-topleft: 3px;
+                -moz-border-radius-bottomleft: 3px;
+                border-top-left-radius: 3px;
+                border-bottom-left-radius: 3px;
+                span {
+                    display: block;
+                    background: rgba(0,0,0,.1);
+                    padding: 0 20px;
+                    height: 35px;
+                    line-height: 35px;
+                    -webkit-border-top-left-radius: 3px;
+                    -webkit-border-bottom-left-radius: 3px;
+                    -moz-border-radius-topleft: 3px;
+                    -moz-border-radius-bottomleft: 3px;
+                    border-top-left-radius: 3px;
+                    border-bottom-left-radius: 3px;
+                }
+            }
+            .skillbar-bar {
+                height: 35px;
+                width: 0;
+                background: #6adcfa;
+                border-radius: 3px;
+                -moz-border-radius: 3px;
+                -webkit-border-radius: 3px;
+            }
+            .skill-bar-percent {
+                position: absolute;
+                right: 10px;
+                top: 0;
+                font-size: 11px;
+                height: 35px;
+                line-height: 35px;
+                color: #fff;
+                color: rgba(0,0,0,.4);
+            }
+            &:first-of-type{
+                .skillbar-title{
+                    background: #03A9F4;
+                }
+                .skillbar-bar{
+                    background: rgb(129, 212, 250); 
+                    width: 80%;
+                }
+            }
+            &:nth-of-type(2){
+                .skillbar-title{
+                    background: #673AB7;
+                }
+                .skillbar-bar{
+                    background: rgb(179, 157, 219); 
+                    width: 75%;
+                }
+            }
+            &:nth-of-type(3){
+                .skillbar-title{
+                    background: #FF5722;
+                }
+                .skillbar-bar{
+                    background: rgb(255, 171, 145); 
+                    width: 95%;
+                }
+            }
+            &:nth-of-type(4){
+                .skillbar-title{
+                    background: #4CAF50;
+                }
+                .skillbar-bar{
+                    background: rgb(165, 214, 167); 
+                    width: 95%;
+                }
+            }
+            &:nth-of-type(5){
+                .skillbar-title{
+                    background: #F44336;
+                }
+                .skillbar-bar{
+                    background: rgb(239, 154, 154); 
+                    width: 65%;
+                }
+            }
+        }
+    }
+    .othr-skill-wrap{
+        padding: 40px 0 0;
+        .inner-wrap{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            ul{
+                li{
+                    font-size: 18px;
+                    color: #f2f2f2;
+                    position: relative;
+                    padding-left: 25px;
+                    &:before{
+                        content: '';
+                        position: absolute;
+                        width: 20px;
+                        height: 20px;
+                        left: 0;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        background: url('../../images/tick.png') center / 100% no-repeat;
+                    }
+                }
+            }
+        }
+    }
+    .dwnld-wrap{
+        padding-top: 65px;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        p{
+            font-size: 25px;
+            color: #98CCFD;
+            padding-bottom: 20px;
+        }
+        a{
+            cursor: pointer;
+        }
+    }
+}
+/* Third wrap CSS Ends */
+
+/* Fourth wrap CSS Starts */
+.fourth-wrap{
+    padding: 70px 0;
+    h3{
+        font-size: 50px;
+        color: #3a3a3a;
+        margin-bottom: 10px;
+        font-weight: 300;
+        text-align: center;
+    }
+    .proj-wrap{
+        padding: 0 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        .proj{
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            justify-content: center;
+            padding-top: 40px;
+            h4{
+                font-size: 25px;
+                color: #009ca8;
+                padding-bottom: 12px;
+            }
+            img{
+                width: 100%;
+                max-width: 450px;
+            }
+        }
+    }
+}
+/* Fourth wrap CSS Ends */
+
+/* Fifth wrap CSS Starts */
+.fifth-wrap{
+    padding: 40px 0;
+    margin: 70px 0;
+    background-color: #e55c4c;
+    h3{
+        font-size: 50px;
+        color: #fff;
+        margin-bottom: 40px;
+        font-weight: 300;
+        text-align: center;
+    }
+    .swiper{
+        padding-bottom: 60px;
+        .swiper-button-next:after, .swiper-button-prev:after{
+            color: #fff;
+        }
+        .swiper-pagination{
+            .swiper-pagination-bullet{
+                background: #fff;
+            }
+        }
+    }
+    .quotes-wrap{
+        .quote{
+            text-align: center;
+            img{
+                width: 100%;
+                max-width: 150px;
+                border-radius: 50%;
+            }
+            .txt{
+                font-size: 30px;
+                color: #fff;
+                max-width: 700px;
+                width: 100%;
+                padding: 40px 0 20px;
+                font-family: serif;
+                font-style: italic;
+                margin: 0 auto;
+            }
+            .bywho{
+                font-size: 21px;
+                font-weight: 700;
+                color: #fff;
+            }
+        }
+    }
+}
+/* Fifth wrap CSS Ends */
+
+/* Footer CSS Starts */
+footer{
+    text-align: center;
+    padding-top: 70px;
+    p{
+        font-family: Sacramento,cursive;
+        color: #009ca8;
+        font-size: 70px;
+        padding-bottom: 40px;
+    }
+    img{
+        height: 240px;
+        margin-bottom: -5px;
+    }
+}
+/* Footer CSS Ends */
