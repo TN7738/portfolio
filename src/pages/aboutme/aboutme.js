@@ -59,7 +59,7 @@ const AboutMe = () => {
                                 selector="#dwnld-resume"
                                 className="dwnld-lnk"
                             >
-                                <a rel="noreferrer">download</a>
+                                <button>download</button>
                             </ScrollIntoView>{" "}
                             my resume below, or just drop me an{" "}
                             <a href="mailto:nashikkar.tejas@gmail.com">email</a>
