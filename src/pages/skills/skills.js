@@ -35,6 +35,10 @@ const Skills = () => {
                             </ul>
                         </div>
                     </div>
+                    <h4>Certifications</h4>
+                    <p className="certification">
+                        AWS Certified Cloud Practitioner - April 2025 <img src="images/aws-certification.png" alt="AWS Certification Badge" />
+                    </p>
                     <div className="dwnld-wrap">
                         <p>Download my Resume</p>
                         <a
