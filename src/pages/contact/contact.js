@@ -8,14 +8,35 @@ const Contact = () =>{
     const [msg, setMsg] = useState("");
     const [msgClass, setMsgClass] = useState("msg");
 
+    const submitMessage = async () => {
+        const res = await fetch("https://api.tejasnashikkar.online/message", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                name: name,
+                email: email,
+                details: details
+            })
+        });
+
+        if(res.status === 201){
+            setMsg("Thank you! I'll contact you shortly.");
+            setMsgClass("msg success");
+            setName("");
+            setEmail("");
+            setDetails("");
+        } else {
+            setMsg("Something went wrong, please try again later.");
+            setMsgClass("msg error");
+        }
+    }
+
     const onSubmit = (e) => {
         e.preventDefault();
 
-        setMsg("Thank you! I'll contact you shortly.");
-        setMsgClass("msg success");
-        setName("");
-        setEmail("");
-        setDetails("");
+        submitMessage();
     }
     return(
         <section className="sixth-wrap" id="contact-me">
